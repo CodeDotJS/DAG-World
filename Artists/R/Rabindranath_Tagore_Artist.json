@@ -1,0 +1,42 @@
+{
+    "name": "Rabindranath Tagore",
+    "year": "1861 - 1941",
+    "intro": "Poet, novelist, musician, playwright, and Asia\u2019s first Nobel Prize awardee\u2014which he won for literature in 1913\u2014Rabindranath Tagore was born on 7 May 1861, and took to painting and drawing only in his sixties.",
+    "bio": "His paintings, with their intense, semi-expressionist faces of men and women inhabiting a twilight world and a nebulous dreamscape, conveying suppressed emotions and a deep, brooding interiority, had no national connection but belonged to the modern international diction of painting.\nTagore\u2019s paintings represented a break with himself as a poet and philosopher. His belief in harmony, ultimate goodness and beauty of mankind and the world, appeared in direct dissonance with the subject of his paintings, with the latter subverting the former.\nTagore\u2019s first exhibitions were in Paris, and successful, but were less well received in India at the time. Tagore, who set up Visva-Bharati University in Santiniketan, was instrumental in establishing Kala Bhavana, its art department, with Nandalal Bose as its head. His works were declared a National Treasure under the Antiquities and Art Treasure Act, 1972. Tagore passed away on 7 August 1941 in Calcutta.",
+    "CurrentProductId": "4695",
+    "LastArtProId": "5413",
+    "profile": "https://dagworld.com/rabindranath-tagore.html",
+    "image": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/r/a/rabindranath_tagore_1.jpg",
+    "artworks": [
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/8/_/8._tagorer03.jpg",
+            "title": "Untitled",
+            "year": 1934,
+            "medium": "Watercolour, pen and ink,  and pastel on paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/t/a/tagorer02_1.jpg",
+            "title": "Untitled",
+            "year": null,
+            "medium": "Ink on Paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/t/a/tagorer11.jpg",
+            "title": "Profile of a Woman",
+            "year": 1936,
+            "medium": "Pastel on paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/t/a/tagorer16.jpg",
+            "title": "Untitled (Head)",
+            "year": 1939,
+            "medium": "Ink on paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/t/a/tagorer09_2.jpg",
+            "title": "Untitled",
+            "year": 1910,
+            "medium": "Pastel on paper"
+        }
+    ]
+}

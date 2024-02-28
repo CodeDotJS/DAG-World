@@ -1,0 +1,48 @@
+{
+    "name": "Yoshida Hiroshi",
+    "year": "1876 - 1950",
+    "intro": "Painter-printmaker Yoshida Hiroshi, one of the leading figures of Japanese printmaking after the end of the Meiji period (1912), was born on 19 September 1876 in Kurume in Fukuoka prefecture.",
+    "bio": "His artistic talent was discovered early, and he went to Kyoto to study painting, eventually moving to Tokyo to study under Shotaro Koyama. He studied Western-style painting and embarked on travels abroad, achieving great success selling his watercolours and oil paintings in the United States, Europe and North Africa. \n It was not before 1920 that Yoshida began creating woodblock prints, apparently inspired by the West\u2019s fascination with ukiyo-e or Japanese woodblock prints. He was supported by Watanabe Shozaburo, publisher and owner of the Watanabe print store in Tokyo, who published the first seven of Yoshida\u2019s woodblock prints. In 1923, Watanabe\u2019s store was gutted by the fires resulting from the Great Kanto earthquake, destroying Yoshida\u2019s wood blocks and more than a hundred prints. \n Yoshida belonged to the Shin-Hanga (\u2018New Print\u2019) movement of printmaking, that integrated Western elements without giving up the values of traditional Japanese woodblock prints, taking ukiyo-e to new heights. Artists were able to lend the effects of light and individual moods with the new syncretic movement. Yoshida\u2019s prints reflected his love for travel and mountains. He spent four months from November 1930 travelling in India and Southeast Asia. Over the next two years, he produced a series of thirty-two woodblock prints of scenes from this trip. He was particularly fascinated with the quality of light he found in India and often depicted the same subjects at different times of day or night.",
+    "CurrentProductId": "5463",
+    "LastArtProId": "5471",
+    "profile": "https://dagworld.com/yoshida-hiroshi.html",
+    "image": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/y/o/yoshida_hiroshi.jpg",
+    "artworks": [
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/y/o/yoshidahiroshi003.jpg",
+            "title": "Ghat in Benaras (Benaresu no gatto)",
+            "year": 1931,
+            "medium": "Kokka woodblock print on paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/y/o/yoshidahiroshi004.jpg",
+            "title": "Ajmer Gate, Jaipur (Jaipuuru no Ajumeru mon)",
+            "year": 1931,
+            "medium": "Kokka woodblock print on paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/y/o/yoshidahiroshi006.jpg",
+            "title": "Shalimar Garden, Lahore (Sharamaru Gaaden)",
+            "year": 1932,
+            "medium": "Kokka woodblock print on paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/y/o/yoshidahiroshi007.jpg",
+            "title": "Buland Darwaza of Ajmer (Ajumeru no Burenderuwajaa)",
+            "year": 1931,
+            "medium": "Kokka woodblock print on paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/y/o/yoshidahiroshi008.jpg",
+            "title": "A Gate to the Stupa of Sanchi (Sanchi no mon)",
+            "year": 1932,
+            "medium": "Kokka woodblock print on paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/y/o/yoshidahiroshi010.jpg",
+            "title": "Taj Mahal under Moonlight (Tsukiyo no Taji Maharu)",
+            "year": 1931,
+            "medium": "Kokka woodblock print on paper"
+        }
+    ]
+}

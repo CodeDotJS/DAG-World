@@ -1,0 +1,24 @@
+{
+    "name": "Nicholas Roerich",
+    "year": "1874 - 1947",
+    "intro": "One of the nine National Treasure artists of India, Russia-born Nicholas Roerich was not just a painter but a stage designer for ballets, an explorer, writer, and philosopher.",
+    "bio": "As a painter, Roerich is best remembered for his ethereal paintings of the mist-laden and wispy Himalayas, done mostly in tempera or oil. These paintings remain some of the best works celebrating the mighty mountain range.\nRoerich was born on 9 October 1874 in St. Petersburg in a well-to-do family that often entertained the city\u2019s cultural set. He studied law and drawing simultaneously and soon came in contact with Sergei Diaghilev, founder of the renowned Ballets Russes. Designing sets and costumes for the group\u2019s productions, he toured Europe with Diaghilev, and came in touch with Pablo Picasso, Henri Matisse, Marc Chagall, and Wassily Kandinsky, who were also designing sets for Diaghilev.\nRoerich immigrated to the United States in 1920 with wife Helena, where he founded the Agni Yoga Society the same year in New York, and an art institute the next year which would metamorphose into the Nicholas Roerich Museum in 1949. Around this time, Roerich started on a quest to explore the Eastern philosophies that had begun to impact his work.\nThis quest brought him to India in 1923 and he extensively explored the Himalayas from Sikkim in the east to Ladakh and Kashmir in the north-west. He also travelled through large parts of Central Asia and South Asia as part of his Asian expeditions, and was instrumental in creating the Roerich Peace Pact for the safekeeping of cultural and artistic legacies.\nRoerich established the Urusvati Himalayan Research Institute in 1928 in Kullu valley and passed away on 13 December 1947 in Naggar, Himachal Pradesh. His home there is now a museum.",
+    "CurrentProductId": "2187",
+    "LastArtProId": "2957",
+    "profile": "https://dagworld.com/nicholasroerich.html",
+    "image": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/n/i/nicholas_roerich_cover.jpg",
+    "artworks": [
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/r/o/roerichn003ny.jpg",
+            "title": "Trees By a Lake",
+            "year": null,
+            "medium": "Oil, enamel and ink on canvas"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/r/o/roerichn004ny.jpg",
+            "title": "Blue Cliff",
+            "year": null,
+            "medium": "Tempera and graphite on paper"
+        }
+    ]
+}

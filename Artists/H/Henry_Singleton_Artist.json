@@ -1,0 +1,30 @@
+{
+    "name": "Henry Singleton",
+    "year": "1766 - 1839",
+    "intro": "Henry Singleton, who is best remembered in India for his dramatic paintings of the Anglo-Mysore wars of the eighteenth century, depicting the Mysore ruler Tipu Sultan, was born in an English family of artists in London on 19 October 1766.",
+    "bio": "Following his father\u2019s death when he was two years old, Singleton was brought up by an uncle, William Singleton, who had studied under the renowned English painter Ozias Humphry. Another uncle, Joseph Singleton, exhibited regularly at the Royal Academy, as did his sisters Sarah and Maria, who were trained miniaturists.\nShowing talent for drawing and painting early in life, Singleton exhibited at the Society of Artists in 1780, a drawing that he had made when he was only ten. He entered the Royal Academy Schools in 1783, winning a silver medal in 1784 and a gold medal in 1788. From 1784, he exhibited at the Royal Academy every year till his death on 15 September 1839, showcasing nearly 300 works in all.\r\nSingleton was a prolific and a versatile artist, who earned fame for his portraits, depiction of battle scenes, as also for religious, mythological, historical, Shakespearean and other literary subjects that he painted with great felicity. Many of his works were subsequently engraved.\nHe never travelled to India but worked as a propaganda painter recreating images of English victory in the subcontinent. His works are in the collections of the London institutions such as British Museum, Victoria & Albert Museum,  National Portrait Gallery, Royal Institution, and Tate Britain, as also in Edinburgh\u2019s Scottish National Portrait Gallery, and Ulster Museum in Belfast.",
+    "CurrentProductId": "4620",
+    "LastArtProId": "5492",
+    "profile": "https://dagworld.com/henry-singleton.html",
+    "image": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/c/p/cp_hs2.jpg",
+    "artworks": [
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/s/i/singletonhenry0011.jpg",
+            "title": "The Assault and Taking of Seringapatam on the 4th of May 1799",
+            "year": null,
+            "medium": "Engraving, tinted with watercolour on paper pasted on mount board"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/s/i/singletonhenry0012.jpg",
+            "title": "The Body of Tippo Sultaun Recognised by his Family",
+            "year": null,
+            "medium": "Engraving, tinted with watercolour on paper"
+        },
+        {
+            "painting": "https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/s/i/singletonhenry0013.jpg",
+            "title": "The Surrender of Two Sons of Tippo Sultaun",
+            "year": null,
+            "medium": "Engraving, tinted with watercolour on paper"
+        }
+    ]
+}
