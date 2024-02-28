@@ -110,7 +110,7 @@ async def get_artist_year(artist_name):
 
 @app.route('/artists/search/<string:query>', methods=['GET'])
 async def search_artists(query):
-    query = query.lower()  # Convert query to lowercase for case-insensitive search
+    query = query.lower()
     try:
         artists = list(artists_collection.find({'$text': {'$search': query}}, {'_id': 0}))
         return jsonify(artists)
