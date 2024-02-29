@@ -63,11 +63,11 @@ async def get_artist_from_db(artist_name):
 async def get_artist(artist_name):
     if artist_name not in artist_cache:
         artist = await get_artist_from_db(artist_name)
-        artist_cache[artist_name] = artist
-    if artist_cache[artist_name]:
-        return jsonify(artist_cache[artist_name])
-    else:
-        return jsonify({'message': 'Artist not found'}), 404
+        if artist is not None:  # Check if artist was found
+            artist_cache[artist_name] = artist
+        else:
+            return jsonify({'message': 'Artist not found'}), 404
+    return jsonify(artist_cache.get(artist_name, {'message': 'Artist not found'}))
 
 @app.route('/artist/<string:artist_name>/image', methods=['GET'])
 async def get_artist_image(artist_name):
