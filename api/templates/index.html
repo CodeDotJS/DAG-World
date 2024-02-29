@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .container {
+        font-family: 'Fira Mono', monospace;
+        display: flex;
+        flex-direction: row;
+        /* Stack divs vertically */
+        height: 100vh;
+    }
+
+    .side {
+        width: 50%;
+        padding: 10px;
+    }
+
+    .side h1 {
+        text-align: center;
+    }
+
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 780px) {
+        .container {
+            flex-direction: column;
+            /* Revert to horizontal layout */
+        }
+
+        .side {
+            flex: 1;
+            width: 80vh;
+                    }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="side">
+            <h1>API Documentation</h1>
+            <h2>Overview</h2>
+            <p>This Flask API provides endpoints to interact with artist data collected from <a href="https://dagworld.com">DAG</a> - Delhi Art Gallery. It allows users to retrieve information about artists featured on the website, including their details, images, artworks, introductions, biographies, and years of birth. Additionally, users can search for artists by name.</p>
+            <h2>Endpoints</h2>
+            <h3>Get All Artists</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artists`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Retrieves all artists from the database.</li>
+                <li><strong>Response:</strong> Returns a JSON array containing details of all artists.</li>
+            </ul>
+            <h3>Get a Random Artist</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artists/random`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Retrieves a random artist from the database.</li>
+                <li><strong>Response:</strong> Returns JSON data representing a random artist.</li>
+            </ul>
+            <h3>Get Multiple Random Artists</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artists/random/{number}`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Retrieves multiple random artists from the database.</li>
+                <li><strong>Parameters:</strong>
+                    <ul>
+                        <li><code>number</code> (integer): Number of random artists to retrieve.</li>
+                    </ul>
+                </li>
+                <li><strong>Response:</strong> Returns a JSON array containing details of the specified number of random artists.</li>
+            </ul>
+            <h3>Get Artist by Name</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artist/{artist_name}`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Retrieves details of a specific artist by name.</li>
+                <li><strong>Parameters:</strong>
+                    <ul>
+                        <li><code>artist_name</code> (string): Name of the artist.</li>
+                    </ul>
+                </li>
+                <li><strong>Response:</strong> Returns JSON data representing the artist details.</li>
+            </ul>
+            <h3>Get Artist Introduction</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artist/{artist_name}/intro`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Retrieves the introduction of a specific artist by name.</li>
+                <li><strong>Parameters:</strong>
+                    <ul>
+                        <li><code>artist_name</code> (string): Name of the artist.</li>
+                    </ul>
+                </li>
+                <li><strong>Response:</strong> Returns JSON data containing the introduction of the artist.</li>
+            </ul>
+            <h3>Get Artist Biography</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artist/{artist_name}/bio`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Retrieves the biography of a specific artist by name.</li>
+                <li><strong>Parameters:</strong>
+                    <ul>
+                        <li><code>artist_name</code> (string): Name of the artist.</li>
+                    </ul>
+                </li>
+                <li><strong>Response:</strong> Returns JSON data containing the biography of the artist.</li>
+            </ul>
+            <h3>Get Artist Year of Birth</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artist/{artist_name}/year`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Retrieves the year of birth of a specific artist by name.</li>
+                <li><strong>Parameters:</strong>
+                    <ul>
+                        <li><code>artist_name</code> (string): Name of the artist.</li>
+                    </ul>
+                </li>
+                <li><strong>Response:</strong> Returns JSON data containing the year of birth of the artist.</li>
+            </ul>
+            <h3>Get Artist Image</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artist/{artist_name}/image`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Retrieves the image of a specific artist by name.</li>
+                <li><strong>Parameters:</strong>
+                    <ul>
+                        <li><code>artist_name</code> (string): Name of the artist.</li>
+                    </ul>
+                </li>
+                <li><strong>Response:</strong> Returns JSON data containing the image URL of the artist.</li>
+            </ul>
+            <h3>Get Artist Artworks</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artist/{artist_name}/artworks`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Retrieves all artworks of a specific artist by name.</li>
+                <li><strong>Parameters:</strong>
+                    <ul>
+                        <li><code>artist_name</code> (string): Name of the artist.</li>
+                    </ul>
+                </li>
+                <li><strong>Response:</strong> Returns a JSON array containing details of all artworks by the artist.</li>
+            </ul>
+            <h3>Search Artists by Name</h3>
+            <ul>
+                <li><strong>URL:</strong> `/artists/search/{query}`</li>
+                <li><strong>Method:</strong> `GET`</li>
+                <li><strong>Description:</strong> Searches for artists by name.</li>
+                <li><strong>Parameters:</strong>
+                    <ul>
+                        <li><code>query</code> (string): Search query for artist names.</li>
+                    </ul>
+                </li>
+                <li><strong>Response:</strong> Returns a JSON array containing details of artists matching the search query.</li>
+            </ul>
+        </div>
+        <div class="side">
+            <h2>Examples</h2>
+            <ul>
+                <li><strong><a href="/artists">/artists</a></strong> (GET)</li>
+                <li><strong><a href="/artists/random">/artists/random</a></strong> (GET)</li>
+                <li><strong><a href="/artists/random/5">/artists/random/5</a></strong> (GET)</li>
+                <li><strong><a href="/artist/Jagadish Dey">/artist/Jagadish Dey</strong> (GET)</li>
+                <li><strong><a href="/artist/M. F. Husain/intro">/artist/M. F. Husain/intro</a></strong> (GET)</li>
+                <li><strong><a href="/artist/Himmat Shah/bio">/artist/Himmat Shah/bio</a></strong> (GET)</li>
+                <li><strong><a href="/artist/Asit Kumar Haldar/year">/artist/Asit Kumar Haldar/year</a></strong> (GET)</li>
+                <li><strong><a href="/artist/Krishen Khanna/image">/artist/Krishen Khanna/image</a></strong> (GET)</li>
+                <li><strong><a href="/artist/Prabhakar Barwe/artworks">/artist/Prabhakar Barwe/artworks</a></strong> (GET)</li>
+                <li><strong><a href="/artists/search/Jogen Chowdhury">/artists/search/Jogen Chowdhury</a></strong> (GET)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

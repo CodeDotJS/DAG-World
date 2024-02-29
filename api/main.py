@@ -2,7 +2,7 @@ import random
 import os
 from dotenv import load_dotenv
 import asyncio
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
 
@@ -20,7 +20,7 @@ artist_cache = {}
 
 @app.route('/', methods=['GET'])
 def home():
-    return jsonify({'message': 'Unofficial API for Delhi Art Gallery - DAG!'})
+    return render_template('index.html')
 
 async def get_artists_from_db():
     try:
