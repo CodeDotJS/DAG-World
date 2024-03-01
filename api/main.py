@@ -1,3 +1,4 @@
+import random
 import os
 from dotenv import load_dotenv
 import asyncio
@@ -30,27 +31,61 @@ async def get_artists_from_db():
 
 @app.route('/artists', methods=['GET'])
 async def get_artists():
-    artists = await get_artists_from_db()  # Bypass cache and fetch directly from DB
-    return jsonify(artists)
+    if 'artists' not in artist_cache:
+        artists = await get_artists_from_db()
+        artist_cache['artists'] = artists
+    return jsonify(artist_cache['artists'])
 
 @app.route('/artists/random', methods=['GET'])
 async def get_random_artist():
-    artists = await get_artists_from_db()  # Bypass cache and fetch directly from DB
-    random_artist = random.choice(artists)
+    if 'artists' not in artist_cache:
+        artists = await get_artists_from_db()
+        artist_cache['artists'] = artists
+    random_artist = random.choice(artist_cache['artists'])
     return jsonify(random_artist)
 
 @app.route('/artists/random/<int:number>', methods=['GET'])
 async def get_multiple_random_artists(number):
-    artists = await get_artists_from_db()  # Bypass cache and fetch directly from DB
-    random_artists = random.sample(artists, min(number, len(artists)))
+    if 'artists' not in artist_cache:
+        artists = await get_artists_from_db()
+        artist_cache['artists'] = artists
+    random_artists = random.sample(artist_cache['artists'], min(number, len(artist_cache['artists'])))
     return jsonify(random_artists)
 
-# The following endpoints are modified to bypass the cache
+async def get_artist_from_db(artist_name):
+    try:
+        return artists_collection.find_one({'name': artist_name}, {'_id': 0})
+    except PyMongoError as e:
+        print(f"Error fetching artist '{artist_name}': {e}")
+        return None
+
+@app.route('/artist/<string:artist_name>', methods=['GET'])
+async def get_artist(artist_name):
+    if artist_name not in artist_cache:
+        artist = await get_artist_from_db(artist_name)
+        if artist is not None:  # Check if artist was found
+            artist_cache[artist_name] = artist
+        else:
+            return jsonify({'message': 'Artist not found'}), 404
+    return jsonify(artist_cache.get(artist_name, {'message': 'Artist not found'}))
+
+@app.route('/artist/<string:artist_name>/image', methods=['GET'])
+async def get_artist_image(artist_name):
+    if artist_name not in artist_cache:
+        artist = await get_artist_from_db(artist_name)
+        artist_cache[artist_name] = artist
+    if artist_cache[artist_name]:
+        return jsonify({'image': artist_cache[artist_name].get('image', '')})
+    else:
+        return jsonify({'message': 'Artist not found'}), 404
+
 @app.route('/artist/<string:artist_name>/artworks', methods=['GET'])
 async def get_artist_artworks(artist_name):
-    artist = await get_artist_from_db(artist_name)
-    if artist:
-        return jsonify(artist.get('artworks', []))
+    if artist_name not in artist_cache:
+        artist = await get_artist_from_db(artist_name)
+        artist_cache[artist_name] = artist
+    if artist_cache[artist_name]:
+        return jsonify(artist_cache[artist_name].get('artworks', []))
     else:
         return jsonify({'message': 'Artist not found'}), 404
 
@@ -78,12 +113,15 @@ async def get_artist_year(artist_name):
     else:
         return jsonify({'message': 'Artist not found'}), 404
 
-async def get_artist_from_db(artist_name):
+@app.route('/artists/search/<string:query>', methods=['GET'])
+async def search_artists(query):
+    query = query.lower()
     try:
-        return artists_collection.find_one({'name': artist_name}, {'_id': 0})
+        artists = list(artists_collection.find({'$text': {'$search': query}}, {'_id': 0}))
+        return jsonify(artists)
     except PyMongoError as e:
-        print(f"Error fetching artist '{artist_name}': {e}")
-        return None
+        print(f"Error searching for artists with query '{query}': {e}")
+        return jsonify([])
 
 if __name__ == '__main__':
     app.run(debug=True)
