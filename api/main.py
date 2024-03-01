@@ -5,6 +5,7 @@ import asyncio
 from flask import Flask, jsonify, render_template
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
+import urllib.parse
 
 app = Flask(__name__)
 
@@ -54,7 +55,8 @@ async def get_multiple_random_artists(number):
 
 async def get_artist_from_db(artist_name):
     try:
-        return artists_collection.find_one({'name': artist_name}, {'_id': 0})
+        decoded_artist_name = urllib.parse.unquote(artist_name)
+        return artists_collection.find_one({'name': decoded_artist_name}, {'_id': 0})
     except PyMongoError as e:
         print(f"Error fetching artist '{artist_name}': {e}")
         return None
@@ -63,11 +65,11 @@ async def get_artist_from_db(artist_name):
 async def get_artist(artist_name):
     if artist_name not in artist_cache:
         artist = await get_artist_from_db(artist_name)
-        if artist is not None:  # Check if artist was found
-            artist_cache[artist_name] = artist
-        else:
-            return jsonify({'message': 'Artist not found'}), 404
-    return jsonify(artist_cache.get(artist_name, {'message': 'Artist not found'}))
+        artist_cache[artist_name] = artist
+    if artist_cache[artist_name]:
+        return jsonify(artist_cache[artist_name])
+    else:
+        return jsonify({'message': 'Artist not found'}), 404
 
 @app.route('/artist/<string:artist_name>/image', methods=['GET'])
 async def get_artist_image(artist_name):
