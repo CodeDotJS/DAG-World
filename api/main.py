@@ -3,9 +3,10 @@ import os
 from dotenv import load_dotenv
 import asyncio
 from flask import Flask, jsonify, render_template
-from flask_cors import CORS
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
+import urllib.parse
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
