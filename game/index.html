@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Artist!</title>
+    <meta name="description" content="Guess The ARTIST game. Test your knowledge about artists.">
+    <meta name="keywords" content="GTA, Guess The ARTIST, game, artists, delhi art gallery, dag">
+    <meta name="author" content="Rishi Giri">
+     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sideLeft"><img src="images/preview.png" alt="" id="previewImg"></div>
+        <div class="sideRight">
+            <div class="intro">
+                <h1>GUESS THE ART<span style="color: lightblue;">IST</span></h1>
+            </div>
+            <div class="introButtons">
+                <a href="#start"><button class="button">START PLAYING</button></a>
+                <button class="button"><a href="https://dagworld.vercel.app">API</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="onetainer">
+        <div class="question-score-container">
+            <div class="question-row">
+                <h3 id="question"></h3>
+            </div>
+            <div class="score-row">
+                <div class="score-item">
+                    <div id="score" class="btn">Score: <span id="correctScore">0</span></div>
+                </div>
+                <div class="score-item">
+                    <div id="wrongAttempts" class="btn">Wrong Attempts: <span id="wrongCount">0</span></div>
+                </div>
+                <div class="score-item">
+                    <div class="btn" id="nextButton">NEXT</div>
+                </div>
+                <div class="score-item">
+                    <div id="resetScore" class="btn">Reset Score</div>
+                </div>
+            </div>
+            <div id="status"></div>
+        </div>
+        <div class="image-container" id="start">
+            <div class="above">
+                <div class="image-box">
+                    <img src="" alt="Artwork 1" id="image1">
+                </div>
+                <div class="image-box">
+                    <img src="" alt="Artwork 2" id="image2">
+                </div>
+            </div>
+            <div class="below">
+                <div class="image-box">
+                    <img src="" alt="Artwork 3" id="image3">
+                </div>
+                <div class="image-box">
+                    <img src="" alt="Artwork 4" id="image4">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
