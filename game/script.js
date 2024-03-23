@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .then((response) => response.json())
             .then((data) => {
                 const artistName = data.name;
+                const artistProfile = data.profile;
                 const winnerArtwork = data.artworks[Math.floor(Math.random() * data.artworks.length)].painting;
 
                 const otherArtworks = [];
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     })
                     .catch((error) => console.error("Error fetching other images:", error));
 
-                questionElement.textContent = `Which artwork is associated with  "${artistName}"?`;
+                questionElement.innerHTML = `Which artwork is associated with  "<a class="profile" href="${artistProfile}">${artistName}"</a>?`;
             })
             .catch((error) => console.error("Error fetching winner image:", error));
     }
@@ -89,13 +90,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function handleImageClick(clickedImage, index) {
         answerSubmitted = true; // Set answer submitted flag
+        showStatus.classList.add('status');
         if (index === winnerImageIndex) {
             correctScore++;
             showStatus.textContent = "CORRECT!"
+            showStatus.classList.add('correct-answer');
             changeOpacity();
         } else {
             wrongCount++;
             showStatus.textContent = "WRONG!"
+            showStatus.classList.add('wrong-answer');
             changeOpacity();
         }
         updateScoreboard();
@@ -104,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     nextButton.addEventListener('click', function() {
         showStatus.textContent = "";
+        showStatus.classList.remove('status', 'correct-answer', 'wrong-answer');
         answerSubmitted = false; // Reset answer submitted flag
         images.forEach((image) => {
             image.style.opacity = 1;
