@@ -8,9 +8,10 @@
     <meta name="description" content="Guess The ARTIST game. Test your knowledge about artists.">
     <meta name="keywords" content="GTA, Guess The ARTIST, game, artists, delhi art gallery, dag">
     <meta name="author" content="Rishi Giri">
-     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="sideLeft"><img src="images/preview.png" alt="" id="previewImg"></div>
@@ -30,27 +31,26 @@
             <div class="question-row">
                 <h3 id="question"></h3>
             </div>
-
             <div class="status" id="status"></div>
         </div>
         <div class="image-container">
-                <div class="image-box">
-                    <img src="" alt="Artwork 1" id="image1">
-                </div>
-                <div class="image-box">
-                    <img src="" alt="Artwork 2" id="image2">
-                </div>
-                <div class="image-box">
-                    <img src="" alt="Artwork 3" id="image3">
-                </div>
-                <div class="image-box">
-                    <img src="" alt="Artwork 4" id="image4">
-                </div>
+            <div class="image-box">
+                <img src="" alt="Artwork 1" id="image1">
+            </div>
+            <div class="image-box">
+                <img src="" alt="Artwork 2" id="image2">
+            </div>
+            <div class="image-box">
+                <img src="" alt="Artwork 3" id="image3">
+            </div>
+            <div class="image-box">
+                <img src="" alt="Artwork 4" id="image4">
+            </div>
         </div>
         <div class="score-row">
             <div class="score-above">
-                 <div class="score-item">
-                    <div  id="score" class="score current">👍 <span id="correctScore">0</span></div>
+                <div class="score-item">
+                    <div id="score" class="score current">👍 <span id="correctScore">0</span></div>
                 </div>
                 <div class="score-item">
                     <div id="wrongAttempts" class="score attempt">👎 <span id="wrongCount">0</span></div>
@@ -64,8 +64,14 @@
                     <div id="resetScore" class="btn">RESET</div>
                 </div>
             </div>
-    </div>
+        </div>
     </div>
     <script src="script.js"></script>
+    <script>
+    window.va = window.va || function() {
+        (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
+
 </html>
